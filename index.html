@@ -4,7 +4,7 @@
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <title>Encoder</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta name='viewport' content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
         <link rel='stylesheet' href="reset.css">
         <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
         <script src='main.js'></script>
@@ -14,32 +14,31 @@
     </head>
     <body>
         <header>
-            <div class="encabezado">
-                <img class="logo" src="images/Logo.png" alt="Logo de Alura">
-            </div>
+            <img class="logo" src="images/Logo.png" alt="Logo de Alura">
         </header>
         <main>
-            <section>
+            <section class="seccion1">
                 <textarea class="text-area" placeholder="Ingrese el texto aqui" cols="30" rows="10"></textarea>
-                <div>
-                    <h6 class="informacion">
-                        Solo letras minusculas y sin acentos
-                    </h6>
-                </div>
-                <div class="botones">
-                    <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
-                    <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
-                </div>
+                <h6 class="informacion">
+                    Solo letras minusculas y sin acentos
+                </h6>
+                <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
             </section>
-            <section>
-                <textarea class="mensaje" cols="20" rows="10"></textarea>
-                <div>
-                    <button class="copiar" onclick="btnCopiar()">Copiar</button>
+            <section class="seccion2">
+                <img src="images/Muneco.png" alt="muneco" class="muneco">
+                <textarea class="mensaje" cols="20" rows="10" id="resultado"></textarea>
+                <div class="subtitulo">
+                    <h3>No se encontro ningun mensaje.</h3>
                 </div>
+                <div class="parrafo">
+                    <p>Escribe el texto que deseas encriptar o desencriptar.</p>
+                </div>
+                <button class="copiar" onclick="btnCopiar()">Copiar</button>
             </section>
         </main>
     </body>
     <footer>
-
+        Made by Carlos Andres Diaz Arias 
     </footer>
 </html>

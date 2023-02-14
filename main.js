@@ -12,6 +12,17 @@ function btnEncriptar(){
 }    
 
 function encriptar(stringEncriptado){
+    document.querySelector(".copiar").style.display = "show";
+    document.querySelector(".copiar").style.display = "inherit";
+    document.querySelector(".mensaje").style.display = "show";
+    document.querySelector(".mensaje").style.display = "inherit";
+    var subtitulo = document.querySelector(".subtitulo");
+    subtitulo.style.display = "none";
+    var parrafo = document.querySelector(".parrafo");
+    parrafo.style.display = "none";
+    var muneco = document.querySelector(".muneco");
+    muneco.style.display = "none";
+    
     let matrizCodigo = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
     stringEncriptado = stringEncriptado.toLowerCase();
     for(let i=0;i<matrizCodigo.length;i++){
@@ -41,8 +52,11 @@ function desencriptar(stringDesencriptado){
 
 function btnCopiar(){
     var copyText = document.querySelector(".mensaje");
-
-    navigator.clipboard.writeText(copyText.value);
-    alert("Texto copiado: " + copyText.value);
+    const textArea = document.querySelector(".text-area");
+    navigator.clipboard.writeText(copyText.value).then(function(x){
+        alert("Texto copiado: " + copyText.value);
+    });
+    
+    textArea.value = copyText.value;
 }
 
